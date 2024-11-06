@@ -15,3 +15,4 @@ simulation/gate_env/lib/python3.12/site-packages/itk/_ITKImageIntensityPython.ab
 .git/lfs/objects/e8/9b/e89b2aa2cf02fbb51bd15f5da4a064cee17dd4969bb3b8b9d43cd32bbc7ad97c filter=lfs diff=lfs merge=lfs -text
 .git/lfs/objects/6d/f5/6df5a0512b0b765f88b1a13fec4c8a163dc0435320e09d793b52da28484f8cd6 filter=lfs diff=lfs merge=lfs -text
 .git/objects/pack/pack-82f1de7217f1ee2ca8446c338bb15a053c7234b5.pack filter=lfs diff=lfs merge=lfs -text
+simulation/gate_env/lib/python3.12/site-packages/**/*.so filter=lfs diff=lfs merge=lfs -text
