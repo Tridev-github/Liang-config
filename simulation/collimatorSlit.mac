@@ -1,0 +1,47 @@
+#################################################################
+# collimator
+/gate/world/daughters/name collimator
+/gate/world/daughters/insert box
+/gate/collimator/geometry/setXLength   2.0  mm
+/gate/collimator/geometry/setYLength   54.0  mm
+/gate/collimator/geometry/setZLength   204.0  mm
+/gate/collimator/placement/setTranslation 99. 0. 0. mm
+/gate/collimator/setMaterial Air
+/gate/collimator/vis/setColor gray
+/gate/collimator/vis/forceWireframe
+/gate/collimator/vis/setVisible 1
+
+
+###########################################
+#Module
+/gate/collimator/daughters/name collimodule
+/gate/collimator/daughters/insert box
+/gate/collimodule/geometry/setXLength   2.0  mm
+/gate/collimodule/geometry/setYLength   6.0  mm
+/gate/collimodule/geometry/setZLength   6.0  mm
+/gate/collimodule/placement/setTranslation 0. 0. 0. mm
+/gate/collimodule/setMaterial Tungsten
+/gate/collimodule/vis/setColor gray
+/gate/collimodule/vis/forceSolid
+/gate/collimodule/vis/setVisible 1
+/gate/collimodule/repeaters/insert cubicArray
+/gate/collimodule/cubicArray/setRepeatNumberX  1
+/gate/collimodule/cubicArray/setRepeatNumberY  9
+/gate/collimodule/cubicArray/setRepeatNumberZ  34
+/gate/collimodule/cubicArray/setRepeatVector  0. 6. 6.  mm
+
+/gate/collimodule/daughters/name slitmodule
+/gate/collimodule/daughters/insert box
+/gate/slitmodule/geometry/setXLength   2.0  mm
+/gate/slitmodule/geometry/setYLength   6.0  mm
+/gate/slitmodule/geometry/setZLength   2.0  mm
+/gate/slitmodule/setMaterial Air
+/gate/slitmodule/vis/setColor white
+/gate/slitmodule/vis/forceSolid
+#/gate/holemodule/vis/forceWireframe
+/gate/slitmodule/vis/setVisible 1
+
+
+#Repeat Module
+/gate/collimator/repeaters/insert ring
+/gate/collimator/ring/setRepeatNumber 1

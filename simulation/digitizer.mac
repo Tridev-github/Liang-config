@@ -1,0 +1,52 @@
+
+# Adder
+
+/gate/digitizer/Singles/insert adder
+/gate/digitizer/Singles/insert readout
+/gate/digitizer/Singles/readout/setDepth 3
+
+# Crystal Blurring
+# assign a different energy resolution for each crystal in the detector block
+/gate/digitizer/Singles/insert blurring
+/gate/digitizer/Singles/blurring/setLaw inverseSquare
+/gate/digitizer/Singles/blurring/inverseSquare/setResolution 0.21
+/gate/digitizer/Singles/blurring/inverseSquare/setEnergyOfReference 140. keV
+
+#/gate/digitizer/name Singles_2
+#/gate/digitizer/insert singleChain
+#/gate/digitizer/Singles_2/insert systemFilter
+#/gate/digitizer/Singles_2/systemFilter/selectSystem scanner3
+#/gate/digitizer/Singles_2/insert adder
+#/gate/digitizer/Singles_2/insert readout
+#/gate/digitizer/Singles_2/readout/setDepth 2
+
+#/gate/digitizer/name Singles_3
+#/gate/digitizer/insert singleChain
+#/gate/digitizer/Singles_3/insert systemFilter
+#/gate/digitizer/Singles_3/systemFilter/selectSystem scanner4
+#/gate/digitizer/Singles_3/insert adder
+#/gate/digitizer/Singles_3/insert readout
+#/gate/digitizer/Singles_3/readout/setDepth 2
+
+
+# READOUT
+#/gate/digitizer/Singles/insert readout
+#/gate/digitizer/Singles/readout/setDepth 2
+
+# Crystal Blurring
+# assign a different energy resolution for each crystal in the detector block
+#/gate/digitizer/Singles/insert crystalblurring
+#/gate/digitizer/Singles/blurring/setLaw inverseSquare
+#/gate/digitizer/Singles/blurring/inverseSquare/setResolution 0.099
+#/gate/digitizer/Singles/blurring/inverseSquare/setEnergyOfReference 511. keV
+
+#/gate/digitizer/Singles/crystalblurring/setCrystalQE 0.9058
+#QE: probability for the event to be detected by the photo-detector.
+
+
+# THRESHOLDER / UPHOLDER
+#/gate/digitizer/Singles/insert thresholder
+#/gate/digitizer/Singles/thresholder/setThreshold 0.0 keV
+#/gate/digitizer/Singles/insert upholder
+#/gate/digitizer/Singles/upholder/setUphold  10000.0 keV
+#/gate/digitizer/Singles/thresholder/verbose 0

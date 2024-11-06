@@ -1,0 +1,43 @@
+#/control/execute visual.mac
+/vis/viewer/set/viewpointVector 0 0 1
+/vis/disable
+/gate/geometry/setMaterialDatabase GateMaterials_GAGG_OptGlass.db
+
+#world 
+/gate/world/geometry/setXLength 2000.0 mm
+/gate/world/geometry/setYLength 2000.0 mm
+/gate/world/geometry/setZLength 500.0 mm
+/gate/world/setMaterial Air
+
+#/control/execute phantomWater.mac
+#/control/execute NCATPhantom.mac
+
+/control/execute shielding.mac
+#/control/execute collimatorHole.mac
+/control/execute collimatorSlit.mac
+/control/execute detectorModule_200mm.mac
+/control/execute physics.mac
+
+#INITIALIZE
+/gate/run/initialize
+#/geometry/test/recursive_test
+
+#Random
+/gate/random/setEngineName JamesRandom
+/gate/random/setEngineSeed auto
+/gate/random/verbose 1
+
+
+/control/execute digitizer.mac
+/control/execute output.mac
+/control/execute verbose.mac
+#/control/execute NCATSource.mac
+/control/execute sourceYZ.mac
+
+
+#Start Simulation
+/gate/application/setTimeSlice 1  s
+/gate/application/setTimeStart  0 s
+/gate/application/setTimeStop  1  s
+/gate/application/startDAQ
+

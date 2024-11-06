@@ -1,0 +1,209 @@
+# scanner_1
+# coded SPECT Scanner_1
+/gate/world/daughters/name scanner1
+/gate/world/daughters/systemType cylindricalPET
+/gate/world/daughters/insert box
+/gate/scanner1/setMaterial Air
+#R=400mm
+/gate/scanner1/geometry/setXLength   26.88  mm
+/gate/scanner1/geometry/setYLength   53.76  mm
+/gate/scanner1/geometry/setZLength   4.  mm
+/gate/scanner1/placement/setTranslation 113.44 0. 0. mm
+/gate/scanner1/vis/forceWireframe
+/gate/scanner1/vis/setVisible 1
+/gate/scanner1/repeaters/insert cubicArray
+/gate/scanner1/cubicArray/setRepeatNumberX  1
+/gate/scanner1/cubicArray/setRepeatNumberY  1
+/gate/scanner1/cubicArray/setRepeatNumberZ  50
+/gate/scanner1/cubicArray/setRepeatVector   0 0 4  mm
+
+
+#Module
+/gate/scanner1/daughters/name module1
+/gate/scanner1/daughters/insert box
+/gate/module1/geometry/setXLength   3.36  mm
+/gate/module1/geometry/setYLength   53.76  mm
+/gate/module1/geometry/setZLength   4.  mm
+/gate/module1/placement/setTranslation -1.68 0. 0 mm
+/gate/module1/setMaterial Air
+/gate/module1/vis/setColor gray
+/gate/module1/vis/forceWireframe
+/gate/module1/vis/setVisible 1
+/gate/module1/repeaters/insert cubicArray
+/gate/module1/cubicArray/setRepeatNumberX  4
+/gate/module1/cubicArray/setRepeatNumberY  1
+/gate/module1/cubicArray/setRepeatNumberZ  1
+/gate/module1/cubicArray/setRepeatVector   6.72 0 0  mm
+
+#Crystal
+/gate/module1/daughters/name crystal11
+/gate/module1/daughters/insert box
+/gate/crystal11/geometry/setXLength   3.36  mm
+/gate/crystal11/geometry/setYLength   6.72  mm
+/gate/crystal11/geometry/setZLength   4.  mm
+/gate/crystal11/placement/setTranslation 0. 0. 0. mm
+/gate/crystal11/setMaterial Air
+/gate/crystal11/vis/setColor gray
+/gate/crystal11/vis/forceWireframe
+/gate/crystal11/vis/setVisible 1
+/gate/crystal11/repeaters/insert cubicArray
+/gate/crystal11/cubicArray/setRepeatNumberX  1
+/gate/crystal11/cubicArray/setRepeatNumberY  8
+/gate/crystal11/cubicArray/setRepeatNumberZ  1
+/gate/crystal11/cubicArray/setRepeatVector   0 6.72 0  mm
+
+#LayerGSO
+/gate/crystal11/daughters/name layerGSO11
+/gate/crystal11/daughters/insert box
+/gate/layerGSO11/geometry/setXLength    2.0  mm
+/gate/layerGSO11/geometry/setYLength    2.0  mm
+/gate/layerGSO11/geometry/setZLength    4.0  mm
+/gate/layerGSO11/placement/setTranslation 0. -1.68 0. mm
+/gate/layerGSO11/setMaterial GAGG
+/gate/layerGSO11/vis/setColor yellow
+/gate/layerGSO11/vis/forceSolid
+/gate/layerGSO11/vis/setVisible 1
+
+#LayerAir
+/gate/crystal11/daughters/name layerAir11
+/gate/crystal11/daughters/insert box
+/gate/layerAir11/geometry/setXLength    2.0  mm
+/gate/layerAir11/geometry/setYLength    2.0  mm
+/gate/layerAir11/geometry/setZLength    4.0  mm
+/gate/layerAir11/placement/setTranslation 0. 1.68 0. mm
+/gate/layerAir11/setMaterial Air
+/gate/layerAir11/vis/setColor blue
+/gate/layerAir11/vis/forceSolid
+/gate/layerAir11/vis/setVisible 1
+
+#Module
+/gate/scanner1/daughters/name module2
+/gate/scanner1/daughters/insert box
+/gate/module2/geometry/setXLength   3.36  mm
+/gate/module2/geometry/setYLength   53.76  mm
+/gate/module2/geometry/setZLength   4.  mm
+/gate/module2/placement/setTranslation -1.68 0. 0 mm
+/gate/module2/setMaterial Air
+/gate/module2/vis/setColor gray
+/gate/module2/vis/forceWireframe
+/gate/module2/vis/setVisible 1
+/gate/module2/repeaters/insert cubicArray
+/gate/module2/cubicArray/setRepeatNumberX  3
+/gate/module2/cubicArray/setRepeatNumberY  1
+/gate/module2/cubicArray/setRepeatNumberZ  1
+/gate/module2/cubicArray/setRepeatVector   6.72 0 0  mm
+
+
+#Crystal
+/gate/module2/daughters/name crystal12
+/gate/module2/daughters/insert box
+/gate/crystal12/geometry/setXLength   3.36  mm
+/gate/crystal12/geometry/setYLength   6.72  mm
+/gate/crystal12/geometry/setZLength   4.  mm
+/gate/crystal12/placement/setTranslation 0. 0. 0. mm
+/gate/crystal12/setMaterial Air
+/gate/crystal12/vis/setColor gray
+/gate/crystal12/vis/forceWireframe
+/gate/crystal12/vis/setVisible 1
+/gate/crystal12/repeaters/insert cubicArray
+/gate/crystal12/cubicArray/setRepeatNumberX  1
+/gate/crystal12/cubicArray/setRepeatNumberY  8
+/gate/crystal12/cubicArray/setRepeatNumberZ  1
+/gate/crystal12/cubicArray/setRepeatVector  0. 6.72 0.  mm
+
+#LayerGSO
+/gate/crystal12/daughters/name layerGSO12
+/gate/crystal12/daughters/insert box
+/gate/layerGSO12/geometry/setXLength    2.0  mm
+/gate/layerGSO12/geometry/setYLength    2.0  mm
+/gate/layerGSO12/geometry/setZLength    4.0  mm
+/gate/layerGSO12/placement/setTranslation 0. 1.68 0. mm
+/gate/layerGSO12/setMaterial GAGG
+/gate/layerGSO12/vis/setColor yellow
+/gate/layerGSO12/vis/forceSolid
+/gate/layerGSO12/vis/setVisible 1
+
+#LayerAir
+/gate/crystal12/daughters/name layerAir12
+/gate/crystal12/daughters/insert box
+/gate/layerAir12/geometry/setXLength    2.0  mm
+/gate/layerAir12/geometry/setYLength    2.0  mm
+/gate/layerAir12/geometry/setZLength    4.0  mm
+/gate/layerAir12/placement/setTranslation 0. -1.68 0. mm
+/gate/layerAir12/setMaterial Air
+/gate/layerAir12/vis/setColor blue
+/gate/layerAir12/vis/forceSolid
+/gate/layerAir12/vis/setVisible 1
+
+
+#Module
+/gate/scanner1/daughters/name module3
+/gate/scanner1/daughters/insert box
+/gate/module3/geometry/setXLength   3.36  mm
+/gate/module3/geometry/setYLength   53.76  mm
+/gate/module3/geometry/setZLength   4.  mm
+/gate/module3/placement/setTranslation 11.76 0. 0 mm
+/gate/module3/setMaterial Air
+/gate/module3/vis/setColor gray
+/gate/module3/vis/forceWireframe
+/gate/module3/vis/setVisible 1
+/gate/module3/repeaters/insert cubicArray
+/gate/module3/cubicArray/setRepeatNumberX  1
+/gate/module3/cubicArray/setRepeatNumberY  1
+/gate/module3/cubicArray/setRepeatNumberZ  1
+/gate/module3/cubicArray/setRepeatVector   0 0 0  mm
+
+
+#Crystal
+/gate/module3/daughters/name crystal13
+/gate/module3/daughters/insert box
+/gate/crystal13/geometry/setXLength   3  mm
+/gate/crystal13/geometry/setYLength   2  mm
+/gate/crystal13/geometry/setZLength   4.  mm
+/gate/crystal13/placement/setTranslation 0. 0. 0. mm
+/gate/crystal13/setMaterial Air
+/gate/crystal13/vis/setColor gray
+/gate/crystal13/vis/forceWireframe
+/gate/crystal13/vis/setVisible 1
+/gate/crystal13/repeaters/insert cubicArray
+/gate/crystal13/cubicArray/setRepeatNumberX  1
+/gate/crystal13/cubicArray/setRepeatNumberY  26 
+/gate/crystal13/cubicArray/setRepeatNumberZ  1
+/gate/crystal13/cubicArray/setRepeatVector  0. 2. 0.  mm
+
+#LayerGSO
+/gate/crystal13/daughters/name layerGSO13
+/gate/crystal13/daughters/insert box
+/gate/layerGSO13/geometry/setXLength    3  mm
+/gate/layerGSO13/geometry/setYLength    2  mm
+/gate/layerGSO13/geometry/setZLength    4.0  mm
+/gate/layerGSO13/placement/setTranslation 0. 0. 0. mm
+/gate/layerGSO13/setMaterial GAGG
+/gate/layerGSO13/vis/setColor yellow
+/gate/layerGSO13/vis/forceSolid
+/gate/layerGSO13/vis/setVisible 1
+
+
+#Repeat Module
+/gate/scanner1/repeaters/insert ring
+/gate/scanner1/ring/setRepeatNumber 1
+
+#Attach System
+/gate/systems/scanner1/rsector/attach    module1
+/gate/systems/scanner1/rsector/attach    module2
+/gate/systems/scanner1/rsector/attach    module3
+/gate/systems/scanner1/crystal/attach    crystal11
+/gate/systems/scanner1/crystal/attach    crystal12
+/gate/systems/scanner1/crystal/attach    crystal13
+/gate/systems/scanner1/layer0/attach   layerGSO11
+/gate/systems/scanner1/layer0/attach   layerGSO12
+/gate/systems/scanner1/layer0/attach   layerGSO13
+/gate/systems/scanner1/layer0/attach   layerAir11
+/gate/systems/scanner1/layer0/attach   layerAir12
+
+#Attach Layer SD
+/gate/layerGSO11/attachCrystalSD
+/gate/layerGSO12/attachCrystalSD
+/gate/layerGSO13/attachCrystalSD
+/gate/layerAir11/attachCrystalSD
+/gate/layerAir12/attachCrystalSD
